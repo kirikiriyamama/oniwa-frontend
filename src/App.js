@@ -1,5 +1,20 @@
 import React from 'react';
 
+class Activity extends React.Component {
+  render() {
+    const date = new Date(this.props.date);
+
+    return (
+      <li>
+        <div>{date.toDateString()}</div>
+        <div>{this.props.vegetable}</div>
+        <div>{this.props.job}</div>
+        <div>{this.props.note}</div>
+      </li>
+    );
+  }
+}
+
 class App extends React.Component {
   render() {
     const data = [
@@ -19,18 +34,15 @@ class App extends React.Component {
       }
     ];
 
-    const activities = data.map((activity) => {
-      const date = new Date(activity.date);
-
-      return (
-        <li key={activity.id}>
-          <div>{date.toDateString()}</div>
-          <div>{activity.vegetable}</div>
-          <div>{activity.job}</div>
-          <div>{activity.note}</div>
-        </li>
-      );
-    });
+    const activities = data.map((activity) =>
+      <Activity
+        key={activity.id}
+        date={activity.date}
+        vegetable={activity.vegetable}
+        job={activity.job}
+        note={activity.note}
+      />
+    );
 
     return (
       <ul>{activities}</ul>
