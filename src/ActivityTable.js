@@ -4,24 +4,7 @@ import ActivityRow from './ActivityRow';
 
 class ActivityTable extends React.Component {
   render() {
-    const data = [
-      {
-        id: '1',
-        date: '2020-06-01T00:00:00+09:00',
-        vegetable: 'ピーマン',
-        job: '肥料',
-        note: 'おおきくなーれ'
-      },
-      {
-        id: '2',
-        date: '2020-06-02T00:00:00+09:00',
-        vegetable: 'ピーマン',
-        job: '収穫',
-        note: 'おおきくなった'
-      }
-    ];
-
-    const activities = data.map((activity) =>
+    const rows = this.props.activities.map((activity) =>
       <ActivityRow
         key={activity.id}
         date={activity.date}
@@ -34,7 +17,7 @@ class ActivityTable extends React.Component {
     return (
       <table>
         <tbody>
-          {activities}
+          {rows}
         </tbody>
       </table>
     );
