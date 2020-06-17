@@ -41,6 +41,18 @@ class NewActivityForm extends React.Component {
     activity.date = (new Date(activity.date)).toISOString();
 
     this.props.onSubmit(activity)
+
+    this.clearForm();
+  }
+
+  clearForm() {
+    const activity = Object.assign({}, this.state.activity);
+
+    activity.vegetable = '';
+    activity.job = '';
+    activity.note = '';
+
+    this.setState({ activity: activity });
   }
 
   renderForm() {
