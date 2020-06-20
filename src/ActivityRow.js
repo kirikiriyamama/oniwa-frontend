@@ -2,7 +2,7 @@ import React from 'react';
 
 class ActivityRow extends React.Component {
   weekday(date) {
-    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    const days = ['日', '月', '火', '水', '木', '金', '土'];
     return days[date.getDay()];
   }
 

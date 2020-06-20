@@ -106,7 +106,7 @@ class NewActivityForm extends React.Component {
     return (
       <div>
         <button onClick={this.handleButtonClick}>
-          {this.state.show ? 'Close' : 'New Activity'}
+          {this.state.show ? '閉じる' : '登録'}
         </button>
         {this.state.show ? this.renderForm() : null}
       </div>
