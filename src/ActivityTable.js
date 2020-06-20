@@ -16,6 +16,14 @@ class ActivityTable extends React.Component {
 
     return (
       <table className='table is-hoverable is-fullwidth'>
+        <thead>
+          <tr>
+            <th>日付</th>
+            <th>野菜</th>
+            <th>作業</th>
+            <th>コメント</th>
+          </tr>
+        </thead>
         <tbody>
           {rows}
         </tbody>
