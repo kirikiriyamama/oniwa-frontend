@@ -35,9 +35,11 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <NewActivityForm onSubmit={this.addActivity}/>
-        <ActivityTable activities={this.state.activities}/>
+      <div className='columns'>
+        <div className='column is-10 is-offset-1'>
+          <NewActivityForm onSubmit={this.addActivity}/>
+          <ActivityTable activities={this.state.activities}/>
+        </div>
       </div>
     );
   }
