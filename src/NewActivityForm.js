@@ -58,46 +58,62 @@ class NewActivityForm extends React.Component {
   renderForm() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label>
-          Date:
-          <input
-            type='date'
-            name='date'
-            value={this.state.activity.date}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Vegetable:
-          <input
-            type='text'
-            name='vegetable'
-            value={this.state.activity.vegetable}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Job:
-          <input
-            type='text'
-            name='job'
-            value={this.state.activity.job}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <label>
-          Comment:
-          <textarea
-            name='comment'
-            value={this.state.activity.comment}
-            onChange={this.handleInputChange}
-          />
-        </label>
-        <br />
-        <input type='submit' value="Submit" />
+        <div className='field'>
+          <label className='label'>日付</label>
+          <div className='control'>
+            <input
+              type='date'
+              name='date'
+              value={this.state.activity.date}
+              onChange={this.handleInputChange}
+              className='input'
+            />
+          </div>
+        </div>
+
+        <div className='field'>
+          <label className='label'>野菜</label>
+          <div className='control'>
+            <input
+              type='text'
+              name='vegetable'
+              value={this.state.activity.vegetable}
+              onChange={this.handleInputChange}
+              className='input'
+            />
+          </div>
+        </div>
+
+        <div className='field'>
+          <label className='label'>作業</label>
+          <div className='control'>
+            <input
+              type='text'
+              name='job'
+              value={this.state.activity.job}
+              onChange={this.handleInputChange}
+              className='input'
+            />
+          </div>
+        </div>
+
+        <div className='field'>
+          <label className='label'>コメント</label>
+          <div className='control'>
+            <textarea
+              name='comment'
+              value={this.state.activity.comment}
+              onChange={this.handleInputChange}
+              className='textarea'
+            />
+          </div>
+        </div>
+
+        <div className='field'>
+          <div className='control'>
+            <input type='submit' value='送信' className='button' />
+          </div>
+        </div>
       </form>
     )
   }
@@ -105,7 +121,7 @@ class NewActivityForm extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleButtonClick}>
+        <button onClick={this.handleButtonClick} className='button'>
           {this.state.show ? '閉じる' : '登録'}
         </button>
         {this.state.show ? this.renderForm() : null}
