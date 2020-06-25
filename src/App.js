@@ -14,14 +14,14 @@ class App extends React.Component {
           date: '2020-06-01T00:00:00+09:00',
           vegetable: 'ピーマン',
           job: '肥料',
-          note: 'おおきくなーれ'
+          comment: 'おおきくなーれ'
         },
         {
           id: '2',
           date: '2020-06-02T00:00:00+09:00',
           vegetable: 'ピーマン',
           job: '収穫',
-          note: 'おおきくなった'
+          comment: 'おおきくなった'
         }
       ]
     };

@@ -24,7 +24,7 @@ class ActivityRow extends React.Component {
         <td>{this.formatDate()}</td>
         <td>{this.props.vegetable}</td>
         <td>{this.props.job}</td>
-        <td>{this.props.note}</td>
+        <td>{this.props.comment}</td>
       </tr>
     );
   }

@@ -16,7 +16,7 @@ class NewActivityForm extends React.Component {
         date: `${y}-${m}-${d}`,
         vegetable: '',
         job: '',
-        note: ''
+        comment: ''
       }
     };
   }
@@ -50,7 +50,7 @@ class NewActivityForm extends React.Component {
 
     activity.vegetable = '';
     activity.job = '';
-    activity.note = '';
+    activity.comment = '';
 
     this.setState({ activity: activity });
   }
@@ -89,10 +89,10 @@ class NewActivityForm extends React.Component {
         </label>
         <br />
         <label>
-          Note:
+          Comment:
           <textarea
-            name='note'
-            value={this.state.activity.note}
+            name='comment'
+            value={this.state.activity.comment}
             onChange={this.handleInputChange}
           />
         </label>

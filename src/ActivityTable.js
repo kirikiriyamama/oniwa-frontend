@@ -10,7 +10,7 @@ class ActivityTable extends React.Component {
         date={activity.date}
         vegetable={activity.vegetable}
         job={activity.job}
-        note={activity.note}
+        comment={activity.comment}
       />
     );
 
