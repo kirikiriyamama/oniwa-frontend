@@ -3,8 +3,21 @@ import React from 'react';
 import ActivityRow from './ActivityRow';
 
 class ActivityTable extends React.Component {
+  sortActivities() {
+    return this.props.activities.sort((a, b) => {
+      const aDate = Date.parse(a.date);
+      const bDate = Date.parse(b.date);
+
+      if (aDate !== bDate) {
+        return bDate - aDate;
+      } else {
+        return b.id - a.id;
+      }
+    });
+  }
+
   render() {
-    const rows = this.props.activities.map((activity) =>
+    const rows = this.sortActivities().map((activity) =>
       <ActivityRow
         key={activity.id}
         date={activity.date}
